@@ -7,15 +7,11 @@
 
 }
 
-.piece:hover {
-    background-color: black;
-}
-
 
 #gridContainer {
     width: 640px;
     height: 640px;
-    
+
     position: absolute;
 	top:0;
 	bottom: 0;
