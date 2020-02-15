@@ -1,0 +1,26 @@
+.piece {
+    height: 40px;
+    width: 40px;
+    float: left;
+    outline: 1px solid;
+
+
+}
+
+.piece:hover {
+    background-color: black;
+}
+
+
+#gridContainer {
+    width: 640px;
+    height: 640px;
+    
+    position: absolute;
+	top:0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+  	
+	margin: auto;
+}
