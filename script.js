@@ -9,3 +9,13 @@ function createGrid(){
 };
 
 createGrid();
+
+const x = document.querySelectorAll('.piece');   
+
+x.forEach((piece) => {
+    piece.addEventListener('mouseover', (e) => {
+        piece.setAttribute('style', 'background-color: black');    
+    });
+  });
+
+
