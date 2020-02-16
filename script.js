@@ -11,7 +11,6 @@ function createGrid(){
 createGrid();
 
 const x = document.querySelectorAll('.piece');   
-
 x.forEach((piece) => {
     piece.addEventListener('mouseover', (e) => {
         piece.setAttribute('style', 'background-color: black');    
@@ -19,3 +18,9 @@ x.forEach((piece) => {
   });
 
 
+document.querySelector('.clearButton');
+  clearButton.addEventListener('click', (e) => {
+    x.forEach((piece) => {
+            piece.setAttribute('style', 'background-color: white');   
+            });
+});
