@@ -30,8 +30,7 @@ body{
 
 
 .piece {
-    height: 38px;
-    width: 38px;
+
     float: left;
     outline: 1px solid;
 }
