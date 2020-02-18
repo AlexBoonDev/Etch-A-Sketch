@@ -1,10 +1,10 @@
 // VARIABLES //
 
+let pieceSelector 
 let gridSize = 16;
 let pieceSize = 608/gridSize;
 let currentAttribute = "height: " + pieceSize + "px; width: " + pieceSize + "px; background-color: white;";
 const container = document.querySelector('#gridContainer');
-
 
 // FUNCTIONS //
 
@@ -21,34 +21,37 @@ function createGrid(){
         const gridPiece = document.createElement('div');
         container.appendChild(gridPiece);
         gridPiece.classList.add('piece');
-        gridPiece.setAttribute('style', currentAttribute);    
+        gridPiece.setAttribute('style', currentAttribute);   
+        pieceSelector = document.querySelectorAll('.piece');
     };
 
+    addMouseoverListen();
 };
 
-createGrid();
-
-// MOUSEOVER //
-
-let x = document.querySelectorAll('.piece');   
-
-x.forEach((piece) => {
-    piece.addEventListener('mouseover', (e) => {
-        piece.style.backgroundColor = "black"; 
+function addMouseoverListen(){
+    pieceSelector.forEach((piece) => {
+        piece.addEventListener('mouseover', (e) => {
+            piece.style.backgroundColor = "black"; 
+        });
     });
-});
-
-  // BUTTONS //
+};
   
-document.querySelector('.clearButton');
-  clearButton.addEventListener('click', (e) => {
-    x.forEach((piece) => {
-        piece.setAttribute('style', currentAttribute); 
-    });
-});
+function buttonFunctionality(){
 
-document.querySelector('.sizeButton');
-  sizeButton.addEventListener('click', (e) => {
-    gridSize = prompt("Choose the height/width of the grid");
-    createGrid();
-});
+    document.querySelector('.clearButton');
+    clearButton.addEventListener('click', (e) => {
+        pieceSelector.forEach((piece) => {
+            piece.setAttribute('style', currentAttribute); 
+        });
+    });
+
+    document.querySelector('.sizeButton');
+    sizeButton.addEventListener('click', (e) => {
+        gridSize = prompt("Choose the height/width of the grid");
+        createGrid();
+    });
+}
+
+createGrid();
+buttonFunctionality();
+
