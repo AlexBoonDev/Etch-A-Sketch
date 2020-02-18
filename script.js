@@ -2,7 +2,7 @@
 
 let pieceSelector 
 let gridSize = 16;
-let pieceSize = 608/gridSize;
+let pieceSize = 550/gridSize;
 let currentAttribute = "height: " + pieceSize + "px; width: " + pieceSize + "px; background-color: white;";
 const container = document.querySelector('#gridContainer');
 
@@ -10,7 +10,7 @@ const container = document.querySelector('#gridContainer');
 
 function createGrid(){
 
-    pieceSize = (608/gridSize);
+    pieceSize = (550/gridSize);
     currentAttribute = "height: " + pieceSize + "px; width: " + pieceSize + "px; background-color: white;";
 
     while (container.hasChildNodes()) {
