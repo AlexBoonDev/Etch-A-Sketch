@@ -3,19 +3,32 @@ body{
 }
 
 
+#header {
+    font-family: 'Luckiest Guy', cursive;
+    font-size: 50px;
+    margin-bottom: 0px;
+}
+
+.rainbow-text {
+    background-image: linear-gradient(to left, violet, indigo, blue, green, yellow, orange, red);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  
 #gridContainer {
-    width: 608px;
-    height: 608px;
+    width: 550px;
+    height: 550px;
 
     position: relative;
-	top: 10px;
+	padding: 10px;
 	margin: auto;
 }
 
 
 #clearButton, #sizeButton {
     font-family: 'Roboto', sans-serif;
-    font-size: 30px;
+    font-size: 20px;
     background-color: rgb(250, 245, 245);
     padding: 10px 20px;
     margin: 10px;
